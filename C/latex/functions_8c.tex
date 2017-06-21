@@ -1,0 +1,261 @@
+\hypertarget{functions_8c}{}\section{sources/functions.c File Reference}
+\label{functions_8c}\index{sources/functions.\+c@{sources/functions.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../headers/functions.\+h\char`\"{}}\\*
+Include dependency graph for functions.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{functions_8c_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}~3.\+14159265358979323846
+\item 
+\#define \hyperlink{functions_8c_aac9153aee4bdb92701df902e06a74eb3}{S\+W\+AP}(a,  b)~\{ tmp = v\mbox{[}a\mbox{]}; v\mbox{[}a\mbox{]} = v\mbox{[}b\mbox{]}; v\mbox{[}b\mbox{]} = tmp; \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{functions_8c_a0c0a81e7797a05c535bad34449d8642c}{drand} ()
+\item 
+double \hyperlink{functions_8c_a3a13ef53219d77d0d734f51fa44bde27}{random\+\_\+normal} ()
+\item 
+double \hyperlink{functions_8c_afc6399a349010f037d590c6ea37d230b}{random\+\_\+econtaminated} (double level, double variance, double variance\+\_\+ratio)
+\item 
+int $\ast$ \hyperlink{functions_8c_a9af456774f7b744234d4b039e0fcb85e}{random\+\_\+permutation} (int n)
+\item 
+double \hyperlink{functions_8c_adab72384c2c404202de6706ae2315109}{qselect} (double $\ast$v, int len, int k)
+\item 
+double \hyperlink{functions_8c_ae85c7f21078c98feaca9b9d904e5b0dd}{absolute\+\_\+value} (double x)
+\item 
+int \hyperlink{functions_8c_a2e84714d9bda277b7b7d49481189107c}{cmp} (const void $\ast$a, const void $\ast$b)
+\item 
+double \hyperlink{functions_8c_a57c8a26a80065769de3f66b1f823788b}{weighted\+\_\+median} (int M, double samples\mbox{[}$\,$\mbox{]}, double weights\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{functions_8c_ad4cf87485f5fb5f6511f691b48101544}{arwmr} (int N, int M, double x\mbox{[}$\,$\mbox{]}, double y\mbox{[}$\,$\mbox{]}, double A\mbox{[}$\,$\mbox{]}\mbox{[}M\mbox{]}, int itmax, double beta, double tol, double epsilon)
+\item 
+void \hyperlink{functions_8c_a7763860277b7bcd945b02628fe8e5189}{wmr} (int N, int M, double x\mbox{[}$\,$\mbox{]}, double y\mbox{[}$\,$\mbox{]}, double A\mbox{[}$\,$\mbox{]}\mbox{[}M\mbox{]}, int itmax, double beta, double tol)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \hyperlink{functions_8c_a51c2284805ce28c4d97297c973e28ad6}{array}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{functions.\+c@{functions.\+c}!M\+\_\+\+PI@{M\+\_\+\+PI}}
+\index{M\+\_\+\+PI@{M\+\_\+\+PI}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{M\+\_\+\+PI}{M_PI}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+\_\+\+PI~3.\+14159265358979323846}\hypertarget{functions_8c_ae71449b1cc6e6250b91f539153a7a0d3}{}\label{functions_8c_ae71449b1cc6e6250b91f539153a7a0d3}
+\index{functions.\+c@{functions.\+c}!S\+W\+AP@{S\+W\+AP}}
+\index{S\+W\+AP@{S\+W\+AP}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{S\+W\+AP}{SWAP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+AP(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~\{ tmp = v\mbox{[}a\mbox{]}; v\mbox{[}a\mbox{]} = v\mbox{[}b\mbox{]}; v\mbox{[}b\mbox{]} = tmp; \}}\hypertarget{functions_8c_aac9153aee4bdb92701df902e06a74eb3}{}\label{functions_8c_aac9153aee4bdb92701df902e06a74eb3}
+
+
+\subsection{Function Documentation}
+\index{functions.\+c@{functions.\+c}!absolute\+\_\+value@{absolute\+\_\+value}}
+\index{absolute\+\_\+value@{absolute\+\_\+value}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{absolute\+\_\+value(double x)}{absolute_value(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}double absolute\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_ae85c7f21078c98feaca9b9d904e5b0dd}{}\label{functions_8c_ae85c7f21078c98feaca9b9d904e5b0dd}
+Returns the magnitude of the input number. \begin{DoxyReturn}{Returns}
+The absolute value of the input number. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input number. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+c@{functions.\+c}!arwmr@{arwmr}}
+\index{arwmr@{arwmr}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol, double epsilon)}{arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol, double epsilon)}}]{\setlength{\rightskip}{0pt plus 5cm}void arwmr (
+\begin{DoxyParamCaption}
+\item[{int}]{N, }
+\item[{int}]{M, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{y\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}, }
+\item[{int}]{itmax, }
+\item[{double}]{beta, }
+\item[{double}]{tol, }
+\item[{double}]{epsilon}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_ad4cf87485f5fb5f6511f691b48101544}{}\label{functions_8c_ad4cf87485f5fb5f6511f691b48101544}
+Returns the sparse coefficient vector given by the adaptive regularizer weighted median regression (arwmr) algorithm. \begin{DoxyReturn}{Returns}
+The recovered sparse coefficient vector. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Coefficient vector length. \\
+\hline
+{\em M} & Projection vector length. \\
+\hline
+{\em x\mbox{[}$\,$\mbox{]}} & output coefficient vector. \\
+\hline
+{\em y\mbox{[}$\,$\mbox{]}} & Projection vector. \\
+\hline
+{\em A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}} & Dicctionary. \\
+\hline
+{\em itmax} & Maximum number of iterations. \\
+\hline
+{\em beta} & Continuation parameter. \\
+\hline
+{\em tol} & Tolerance \\
+\hline
+{\em epsilon} & epsilon. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+c@{functions.\+c}!cmp@{cmp}}
+\index{cmp@{cmp}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{cmp(const void $\ast$a, const void $\ast$b)}{cmp(const void *a, const void *b)}}]{\setlength{\rightskip}{0pt plus 5cm}int cmp (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{a, }
+\item[{const void $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_a2e84714d9bda277b7b7d49481189107c}{}\label{functions_8c_a2e84714d9bda277b7b7d49481189107c}
+\index{functions.\+c@{functions.\+c}!drand@{drand}}
+\index{drand@{drand}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{drand()}{drand()}}]{\setlength{\rightskip}{0pt plus 5cm}double drand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_a0c0a81e7797a05c535bad34449d8642c}{}\label{functions_8c_a0c0a81e7797a05c535bad34449d8642c}
+Returns a random number obeying to a standard uniform distribution, (0..1\mbox{]}. \begin{DoxyReturn}{Returns}
+A random number that follows a uniform statistical model between 0 and 1. 
+\end{DoxyReturn}
+\index{functions.\+c@{functions.\+c}!qselect@{qselect}}
+\index{qselect@{qselect}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{qselect(double $\ast$v, int len, int k)}{qselect(double *v, int len, int k)}}]{\setlength{\rightskip}{0pt plus 5cm}double qselect (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{v, }
+\item[{int}]{len, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_adab72384c2c404202de6706ae2315109}{}\label{functions_8c_adab72384c2c404202de6706ae2315109}
+Returns the k-\/order statistic of an array using the quickselect algorithm, where the zero-\/order statistic is the smallest element of the array and the (N-\/1)-\/order statistic is the largest element of the array. \begin{DoxyReturn}{Returns}
+The k-\/order statistic of the input array 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Input array. \\
+\hline
+{\em len} & Length of the input array. \\
+\hline
+{\em k} & the required k-\/order statistic in the range \mbox{[}0,len-\/1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+c@{functions.\+c}!random\+\_\+econtaminated@{random\+\_\+econtaminated}}
+\index{random\+\_\+econtaminated@{random\+\_\+econtaminated}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{random\+\_\+econtaminated(double level, double variance, double variance\+\_\+ratio)}{random_econtaminated(double level, double variance, double variance_ratio)}}]{\setlength{\rightskip}{0pt plus 5cm}double random\+\_\+econtaminated (
+\begin{DoxyParamCaption}
+\item[{double}]{level, }
+\item[{double}]{variance, }
+\item[{double}]{variance\+\_\+ratio}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_afc6399a349010f037d590c6ea37d230b}{}\label{functions_8c_afc6399a349010f037d590c6ea37d230b}
+Returns a random number that follows an e-\/contaminated statistical model. More precisely, an e-\/contaminated distribution consists in a mixed noise model that merges Gaussian random samples and sparse gross errors. In other words, e-\/contaminated distribution follows the model given by \[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2), \] where $ \varepsilon$ is the impulsiveness level for the mixed noise model; $ \sigma^2 $ is the variance of the Gaussian noise; and $\kappa $ is the ratio between the variance of the impulsive noise and the variance of the Gaussian noise. \begin{DoxyReturn}{Returns}
+A random number following an e-\/contaminate distribution. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Impulsiveness level, $\varepsilon$. \\
+\hline
+{\em variance} & the variance of the Gaussian distribution, $\sigma^2$. \\
+\hline
+{\em variance\+\_\+ratio} & the ratio between the variance of the impulsive error model and the variance of the Gaussian noise, $\kappa$. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+c@{functions.\+c}!random\+\_\+normal@{random\+\_\+normal}}
+\index{random\+\_\+normal@{random\+\_\+normal}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{random\+\_\+normal()}{random_normal()}}]{\setlength{\rightskip}{0pt plus 5cm}double random\+\_\+normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_a3a13ef53219d77d0d734f51fa44bde27}{}\label{functions_8c_a3a13ef53219d77d0d734f51fa44bde27}
+Returns a random number obeying to a zero mean Gaussian distribution with unit variance. \begin{DoxyReturn}{Returns}
+A random number normally distributed with zero mean and unit variance. 
+\end{DoxyReturn}
+\index{functions.\+c@{functions.\+c}!random\+\_\+permutation@{random\+\_\+permutation}}
+\index{random\+\_\+permutation@{random\+\_\+permutation}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{random\+\_\+permutation(int n)}{random_permutation(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ random\+\_\+permutation (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_a9af456774f7b744234d4b039e0fcb85e}{}\label{functions_8c_a9af456774f7b744234d4b039e0fcb85e}
+Returns an array containing a random permutation of integer numbers from 1 to n. \begin{DoxyReturn}{Returns}
+An array containing a random permutation of integers. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of elements of the output array. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+c@{functions.\+c}!weighted\+\_\+median@{weighted\+\_\+median}}
+\index{weighted\+\_\+median@{weighted\+\_\+median}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{weighted\+\_\+median(int M, double samples[], double weights[])}{weighted_median(int M, double samples[], double weights[])}}]{\setlength{\rightskip}{0pt plus 5cm}double weighted\+\_\+median (
+\begin{DoxyParamCaption}
+\item[{int}]{M, }
+\item[{double}]{samples\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{weights\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_a57c8a26a80065769de3f66b1f823788b}{}\label{functions_8c_a57c8a26a80065769de3f66b1f823788b}
+Returns the weighted median of a vector of samples that is weighted by a vector of weights. \begin{DoxyReturn}{Returns}
+The weighted median output. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em M} & Length of the vector of samples (as well as the length of the vector of weights). \\
+\hline
+{\em samples} & Vector of samples. \\
+\hline
+{\em weights} & Vector of weights. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+c@{functions.\+c}!wmr@{wmr}}
+\index{wmr@{wmr}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol)}{wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol)}}]{\setlength{\rightskip}{0pt plus 5cm}void wmr (
+\begin{DoxyParamCaption}
+\item[{int}]{N, }
+\item[{int}]{M, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{y\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}, }
+\item[{int}]{itmax, }
+\item[{double}]{beta, }
+\item[{double}]{tol}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8c_a7763860277b7bcd945b02628fe8e5189}{}\label{functions_8c_a7763860277b7bcd945b02628fe8e5189}
+Returns the sparse coefficient vector given by the weighted median regression (wmr) algorithm. \begin{DoxyReturn}{Returns}
+The recovered sparse coefficient vector. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Coefficient vector length. \\
+\hline
+{\em M} & Projection vector length. \\
+\hline
+{\em x\mbox{[}$\,$\mbox{]}} & output coefficient vector. \\
+\hline
+{\em y\mbox{[}$\,$\mbox{]}} & Projection vector. \\
+\hline
+{\em A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}} & Dicctionary. \\
+\hline
+{\em itmax} & Maximum number of iterations. \\
+\hline
+{\em beta} & Continuation parameter. \\
+\hline
+{\em tol} & Tolerance \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{functions.\+c@{functions.\+c}!array@{array}}
+\index{array@{array}!functions.\+c@{functions.\+c}}
+\subsubsection[{\texorpdfstring{array}{array}}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ array}\hypertarget{functions_8c_a51c2284805ce28c4d97297c973e28ad6}{}\label{functions_8c_a51c2284805ce28c4d97297c973e28ad6}

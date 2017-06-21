@@ -1,0 +1,34 @@
+\begin{theindex}
+
+  \item {headers/functions.\+h}, \hyperpage{3}
+
+  \indexspace
+
+  \item {main}
+    \subitem {nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c}, 
+		\hyperpage{3}
+    \subitem {nmse\+\_\+vs\+\_\+snr\+\_\+gaussian.\+c}, \hyperpage{4}
+    \subitem {rsnr\+\_\+vs\+\_\+snr\+\_\+implevel.\+c}, \hyperpage{4}
+
+  \indexspace
+
+  \item {nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c}
+    \subitem {main}, \hyperpage{3}
+  \item {nmse\+\_\+vs\+\_\+snr\+\_\+gaussian.\+c}
+    \subitem {main}, \hyperpage{4}
+
+  \indexspace
+
+  \item {rsnr\+\_\+vs\+\_\+snr\+\_\+implevel.\+c}
+    \subitem {main}, \hyperpage{4}
+
+  \indexspace
+
+  \item {simulations/nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c}, 
+		\hyperpage{3}
+  \item {simulations/nmse\+\_\+vs\+\_\+snr\+\_\+gaussian.\+c}, 
+		\hyperpage{3}
+  \item {simulations/rsnr\+\_\+vs\+\_\+snr\+\_\+implevel.\+c}, 
+		\hyperpage{4}
+
+\end{theindex}
