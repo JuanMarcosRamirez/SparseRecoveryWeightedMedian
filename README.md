@@ -1,4 +1,4 @@
-# [Robust Sparse Signal Recovery Based On Weighted Median Operator](https://www.researchgate.net/publication/265467333_Robust_Sparse_Signal_Recovery_Based_on_Weighted_Median_Operator)
+# [Robust Sparse Signal Recovery Based On Weighted Median Operator](https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf)
 
 [Juan Marcos Ramirez](juanra@ula.ve) and [Jose Luis Paredes](https://www.eecis.udel.edu/~paredesj/)
 
