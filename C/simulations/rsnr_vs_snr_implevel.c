@@ -1,3 +1,11 @@
+/** @file rsnr_vs_snr_implevel.c
+ *  @author	Juan Marcos Ramirez Rondon (juanra@ula.ve, juanmarcos26@gmail.com)
+ *  @date	June, 2017
+ *  @version 	1.00
+ *  @brief 	C routine that generates the data for building the Figure 2(c).
+ *  @see 	Ramirez, J. M., & Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054. Available on: https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf
+ *  @see	Paredes, J. L., & Arce, G. R. (2011). Compressive sensing signal reconstruction by weighted median regression estimates. IEEE Transactions on Signal Processing, 59(6), 2585-2601. Available on: https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf
+*/
 #include <stdlib.h>
 #include <stdio.h>
 #include<time.h>

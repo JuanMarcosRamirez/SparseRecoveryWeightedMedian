@@ -1,11 +1,10 @@
 /** @file nmse_vs_snr_gaussian.c
  *  @author	Juan Marcos Ramirez Rondon (juanra@ula.ve, juanmarcos26@gmail.com)
  *  @date	June, 2017
- *  @version 	1.0
- *  @brief Simulation for plotting the Figure 2(a) of the paper.
- *
- *  @see http://ieeexplore.ieee.org/abstract/document/5728937/
- *  @see https://www.researchgate.net/profile/Juan_Ramirez35/publication/265467333_Robust_Sparse_Signal_Recovery_Based_on_Weighted_Median_Operator/links/544088560cf21227a11bafc0.pdf
+ *  @version 	1.00
+ *  @brief 	C routine that generates the data for building the Figure 2(a).
+ *  @see Ramırez, J. M., & Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054. Available on: https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf
+ *  @see	Paredes, J. L., & Arce, G. R. (2011). Compressive sensing signal reconstruction by weighted median regression estimates. IEEE Transactions on Signal Processing, 59(6), 2585-2601. Available on: https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf
 */
 #include <stdlib.h>
 #include <stdio.h>
