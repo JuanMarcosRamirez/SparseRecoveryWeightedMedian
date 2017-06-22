@@ -3,7 +3,7 @@
  *  @date	June, 2017
  *  @version 	1.00
  *  @brief 	C routine that generates the data for building the Figure 2(a).
- *  @see Ramırez, J. M., & Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054. Available on: https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf
+ *  @see 	Ramirez, J. M., & Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054. Available on: https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf
  *  @see	Paredes, J. L., & Arce, G. R. (2011). Compressive sensing signal reconstruction by weighted median regression estimates. IEEE Transactions on Signal Processing, 59(6), 2585-2601. Available on: https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf
 */
 #include <stdlib.h>
@@ -15,58 +15,79 @@
 
 int main()
 {
-	// Seed of the pseudo-random number generators
+	int num_trials;
+	/* Insert number of iterations */
+	printf("********************************************************\n");
+	printf("Routine that generates data for building the Figure 2(a)\n");
+	printf("********************************************************\n");
+	printf("Insert the number of realizations per SNR value: ");
+	scanf("%d",&num_trials);
+
+	/* Seed of the pseudo-random number generator
+	*/
 	srand(time(NULL));
 
 	int i,j,k,l;
 
-	//Noise parameters
+	/* SNR values in dB
+	*/
 	int num_points = 14;
 	double SNR[num_points];
 	for(i = 0; i < num_points; i++)
 		SNR[i] = 2.00 * i;
 
-	int num_trials = 10;
 
-    	// Signal parameters
+    	/* Sparse signal parameters and projection vector parameters
+	*/
     	int N = 512;
     	int M = 256;
     	int sparsity = 25;
 
 	double x[N];
-	double x_hat[N];
-	double x_bar[N];
 	double z[M];
 	double y[M];
 	int *random_index = malloc(N * sizeof(int));
 	double energy_x;
 	double noise_variance;
-	
 
+	/* Dictionary parameters
+	*/
 	double A[N][M];
 	double energyAi;
+
+	/* Arrays to save the reconstructed sparse signals
+	*/
+	double x_hat[N];
+	double x_bar[N];
+
 	
-	//Algorithm parameters
+	/* Parameters of the weighted median based algorithms
+	*/
 	int itmax 	= 100;
 	double epsilon 	= 0.01;
 	double tol 	= 1e-6;
 	double beta 	= 0.95;
 
+	/* Variables for saving the simulation results
+	*/
 	double mse1, mse2;
 	double nmse_trial_arwmr[num_trials];
 	double nmse_trial_wmr[num_trials];
-
 	double nmse_snr_arwmr[num_points];
 	double nmse_snr_wmr[num_points];
-
-	double time_iteration1[num_trials], time_iteration2[num_trials];
-	double time_per_iteration1[num_points], time_per_iteration2[num_points];
+	double elapsed_time;
+	int estimated_time;
 	
 	clock_t tic, toc;
-	printf("SNR[dB] \tNMSE[dB] \tmean time \tNMSE[dB] \tmean time\n");
-	
+
+	printf("*************************************************************************\n");
+	printf("SNR[dB] \tNMSE[dB] \tNMSE[dB] \tElapsed time \tEstimated\n");
+	printf("\t\tARWMR\t\tWMR\t\t(sec)\t\ttime (min) \n");
+	printf("*************************************************************************\n");
+
 	for(k = 0; k < num_points; k++)
 	{
+		tic = clock();
 		for(l = 0; l < num_trials; l++)
 		{
 		
@@ -125,16 +146,8 @@ int main()
 	        }
 
 		
-		tic = clock();
 		arwmr(N, M, x_hat, y, A, itmax, beta, tol, epsilon);
-		toc = clock();
-		time_iteration1[l] = (double)(toc - tic) / CLOCKS_PER_SEC;
-
-		
-		tic = clock();
 		wmr(N, M, x_bar, y, A, itmax, beta, tol);
-		toc = clock();
-		time_iteration2[l] = (double)(toc - tic) / CLOCKS_PER_SEC;
 
 		mse1 = 0.00;
 		mse2 = 0.00;
@@ -147,22 +160,22 @@ int main()
 		nmse_trial_wmr[l] = 10 * log10(mse2 / energy_x);
 		
 	    }
-		
+		toc = clock();
+		elapsed_time = (double)(toc - tic) / CLOCKS_PER_SEC;
+		estimated_time = (int) elapsed_time * num_points / 60;
 		nmse_snr_arwmr[k] = 0.00;
-		time_per_iteration1[k] = 0.00;
 		nmse_snr_wmr[k] = 0.00;
-		time_per_iteration2[k] = 0.00;
 		
 		for(i = 0; i < num_trials; i++)
 		{
 			nmse_snr_arwmr[k] += (1/(double)num_trials) * nmse_trial_arwmr[i];
-			time_per_iteration1[k] += (1/(double)num_trials) * time_iteration1[i];
 			nmse_snr_wmr[k] += (1/(double)num_trials) * nmse_trial_wmr[i];
-			time_per_iteration2[k] += (1/(double)num_trials) * time_iteration2[i];
 		}
-		printf("%lf\t%lf\t%lf\t%lf\t%lf\n",SNR[k], nmse_snr_arwmr[k], time_per_iteration1[k], nmse_snr_wmr[k], time_per_iteration2[k]);
+		printf("%lf\t%lf\t%lf\t%lf\t%d\n",SNR[k], nmse_snr_arwmr[k], nmse_snr_wmr[k], elapsed_time, estimated_time);
 	}
 
+
+	
 	FILE *f = fopen("../results/nmse_vs_snr_gaussian.dat", "w");
 	if (f == NULL)
 	{

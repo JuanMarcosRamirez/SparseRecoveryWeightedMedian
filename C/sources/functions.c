@@ -125,6 +125,7 @@ void arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, doubl
 
 	double *absAi = malloc(N * sizeof(double));
 	double norm_square_input = 0.00;
+	double norm_input;
 	double max_absAi;	
 	double tau;
 
@@ -132,6 +133,7 @@ void arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, doubl
 	double weights[M + 1];
 	double x_prev;
 	double norm_square_residual;
+	double norm_residual;
 	
 	int iteration = 0;
 	double nee = 1.00;
@@ -141,6 +143,7 @@ void arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, doubl
 		y_aux[i] = 0.00;
 		norm_square_input += pow(y[i], 2.00);
 	}
+	norm_input = sqrt(norm_square_input);
 
 
 	// Computing tau[0]
@@ -181,7 +184,8 @@ void arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, doubl
 		{
 			norm_square_residual += pow(y[i] - y_aux[i], 2.00); 
 		}
-		nee = norm_square_residual / norm_square_input;
+		norm_residual = sqrt(norm_square_residual);
+		nee = norm_residual / norm_input;
 		tau = tau * beta;
 		iteration++;
 	}
@@ -196,6 +200,7 @@ void wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double 
 
 	double y_aux[M];
 	double norm_square_input = 0.00;
+	double norm_input;
 	
 	double element_ATy;
 	double *abs_ATy = malloc(N * sizeof(double));
@@ -207,6 +212,7 @@ void wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double 
 	double x_prev;
 	double threshold_compare;
 	double norm_square_residual;
+	double norm_residual;
 	
 	int iteration = 0;
 	double nee = 1.00;		
@@ -216,6 +222,7 @@ void wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double 
 		y_aux[i] = 0.00;
 		norm_square_input += pow(y[i], 2.00);
 	}
+	norm_input = sqrt(norm_square_input);
 
 
 	// Computing tau[0]
@@ -266,7 +273,8 @@ void wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double 
 		{
 			norm_square_residual += pow(y[i] - y_aux[i], 2.00); 
 		}
-		nee = norm_square_residual / norm_square_input;
+		norm_residual = sqrt(norm_square_residual);
+		nee = norm_residual / norm_input;
 		tau = tau * beta;
 		iteration++;
 	}
