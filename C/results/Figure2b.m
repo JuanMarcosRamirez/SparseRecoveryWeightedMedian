@@ -1,3 +1,12 @@
+%-----------------------------------------------------------------------
+% Routine for plotting Figure 2(b)
+% Author:   Juan Marcos Ramirez Rondon
+% Date  :   June, 2017
+%
+% Ramirez, J. M., & Paredes, J. L. (2014). Robust Sparse Signal Recovery
+% Based on Weighted Median Operator. IEEE International Conference on
+% Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054.
+%-----------------------------------------------------------------------
 close all;
 clear all;
 

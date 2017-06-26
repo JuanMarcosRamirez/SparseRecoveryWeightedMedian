@@ -5,7 +5,7 @@ OPC = -g
 CFLAGS = -c -Wall -lm -O3
 LDFLAGS = -lm -O3 
 
-all: nmse_vs_snr_gaussian nmse_vs_snr_econtaminated rsnr_vs_snr_implevel
+all: nmse_vs_snr_gaussian nmse_vs_snr_econtaminated rsnr_vs_implevel
 
 #---------------------------------------------------#
 
@@ -15,7 +15,7 @@ nmse_vs_snr_gaussian: nmse_vs_snr_gaussian.o functions.o
 nmse_vs_snr_econtaminated: nmse_vs_snr_econtaminated.o functions.o
 	$(CC) $(OPC) -o $@ $^ $(LDFLAGS)
 
-rsnr_vs_snr_implevel: rsnr_vs_snr_implevel.o functions.o
+rsnr_vs_implevel: rsnr_vs_implevel.o functions.o
 	$(CC) $(OPC) -o $@ $^ $(LDFLAGS)
 
 #---------------------------------------------------#
@@ -26,7 +26,7 @@ nmse_vs_snr_gaussian.o: nmse_vs_snr_gaussian.c
 nmse_vs_snr_econtaminated.o: nmse_vs_snr_econtaminated.c
 	$(CC) $(INC) $(CFLAGS) -c $^
 
-rsnr_vs_snr_implevel.o: rsnr_vs_snr_implevel.c
+rsnr_vs_implevel.o: rsnr_vs_implevel.c
 	$(CC) $(INC) $(CFLAGS) -c $^
 
 #library (Don't touch)
@@ -38,4 +38,4 @@ functions.o: ../sources/functions.c
 #---------------------------------------------------#
 
 clean:
-	rm -f *.o nmse_vs_snr_gaussian nmse_vs_snr_econtaminated rsnr_vs_snr_implevel
+	rm -f *.o nmse_vs_snr_gaussian nmse_vs_snr_econtaminated rsnr_vs_implevel
