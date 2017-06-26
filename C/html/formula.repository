@@ -12,3 +12,4 @@
 \form#11:$\kappa$
 \form#12:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,(\kappa \sigma^2)), \]
 \form#13:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2), \]
+\form#14:$ \varepsilon = 3\% $

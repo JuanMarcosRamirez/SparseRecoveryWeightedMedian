@@ -1,8 +1,8 @@
-\hypertarget{nmse__vs__snr__econtaminated_8c}{}\section{simulations/nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.c File Reference}
-\label{nmse__vs__snr__econtaminated_8c}\index{simulations/nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c@{simulations/nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c}}
+\hypertarget{rsnr__vs__implevel_8c}{}\section{simulations/rsnr\+\_\+vs\+\_\+implevel.c File Reference}
+\label{rsnr__vs__implevel_8c}\index{simulations/rsnr\+\_\+vs\+\_\+implevel.\+c@{simulations/rsnr\+\_\+vs\+\_\+implevel.\+c}}
 
 
-C routine that generates the data for building the Figure 2(b).  
+C routine that generates the data for building the Figure 2(c).  
 
 
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
@@ -10,19 +10,19 @@ C routine that generates the data for building the Figure 2(b).
 {\ttfamily \#include $<$time.\+h$>$}\\*
 {\ttfamily \#include $<$math.\+h$>$}\\*
 {\ttfamily \#include \char`\"{}../headers/functions.\+h\char`\"{}}\\*
-Include dependency graph for nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c\+:
+Include dependency graph for rsnr\+\_\+vs\+\_\+implevel.\+c\+:
 % FIG 0
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{nmse__vs__snr__econtaminated_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+int \hyperlink{rsnr__vs__implevel_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-C routine that generates the data for building the Figure 2(b). 
+C routine that generates the data for building the Figure 2(c). 
 
-Figure 2(b) depicts the curves of N\+M\+SE in dB of the recovered coefficient vector versus S\+NR in dB of the random projections when the additive noise follows an e-\/contaminated noise model with impulsiveness level of $ \varepsilon = 3\% $. This curves are obtained by applying the proposed reconstruction algorithm and the weighted median hard-\/thresholding algorithm. Each point in the curves are obtained by averaging a user defined number of trials of the respective experiment. \begin{DoxyAuthor}{Author}
+Figure 2(c) shows reconstruction S\+NR (R-\/\+S\+NR) obtained for the reconstructed signal using an increasing set of impulsiveness levels, where the R-\/\+S\+NR is just the negative of N\+M\+SE in dB. \begin{DoxyAuthor}{Author}
 Juan Marcos Ramirez Rondon (\href{mailto:juanra@ula.ve}{\tt juanra@ula.\+ve}, \href{mailto:juanmarcos26@gmail.com}{\tt juanmarcos26@gmail.\+com}) 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
@@ -39,10 +39,10 @@ Paredes, J. L., \& Arce, G. R. (2011). Compressive sensing signal reconstruction
 
 
 \subsection{Function Documentation}
-\index{nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c@{nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c}!main@{main}}
-\index{main@{main}!nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c@{nmse\+\_\+vs\+\_\+snr\+\_\+econtaminated.\+c}}
+\index{rsnr\+\_\+vs\+\_\+implevel.\+c@{rsnr\+\_\+vs\+\_\+implevel.\+c}!main@{main}}
+\index{main@{main}!rsnr\+\_\+vs\+\_\+implevel.\+c@{rsnr\+\_\+vs\+\_\+implevel.\+c}}
 \subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{nmse__vs__snr__econtaminated_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{nmse__vs__snr__econtaminated_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+)}\hypertarget{rsnr__vs__implevel_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{rsnr__vs__implevel_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}

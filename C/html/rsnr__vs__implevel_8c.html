@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Compressive Sensing Reconstruction Algorithms Based On The Weighted Median Operator: simulations/nmse_vs_snr_econtaminated.c File Reference</title>
+<title>Compressive Sensing Reconstruction Algorithms Based On The Weighted Median Operator: simulations/rsnr_vs_implevel.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,11 +86,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">nmse_vs_snr_econtaminated.c File Reference</div>  </div>
+<div class="title">rsnr_vs_implevel.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>C routine that generates the data for building the Figure 2(b).  
+<p>C routine that generates the data for building the Figure 2(c).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
@@ -98,20 +98,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="functions_8h_source.html">../headers/functions.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for nmse_vs_snr_econtaminated.c:</div>
+Include dependency graph for rsnr_vs_implevel.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="nmse__vs__snr__econtaminated_8c__incl.png" border="0" usemap="#simulations_2nmse__vs__snr__econtaminated_8c" alt=""/></div>
+<div class="center"><img src="rsnr__vs__implevel_8c__incl.png" border="0" usemap="#simulations_2rsnr__vs__implevel_8c" alt=""/></div>
 <!-- MAP 0 -->
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nmse__vs__snr__econtaminated_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rsnr__vs__implevel_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>C routine that generates the data for building the Figure 2(b). </p>
-<p>Figure 2(b) depicts the curves of NMSE in dB of the recovered coefficient vector versus SNR in dB of the random projections when the additive noise follows an e-contaminated noise model with impulsiveness level of <img class="formulaInl" alt="$ \varepsilon = 3\% $" src="form_14.png"/>. This curves are obtained by applying the proposed reconstruction algorithm and the weighted median hard-thresholding algorithm. Each point in the curves are obtained by averaging a user defined number of trials of the respective experiment. </p><dl class="section author"><dt>Author</dt><dd>Juan Marcos Ramirez Rondon (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nr'+'a@u'+'la'+'.ve'; return false;">juanr<span style="display: none;">.nosp@m.</span>a@ul<span style="display: none;">.nosp@m.</span>a.ve</a>, <a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nm'+'arc'+'os'+'26@'+'gm'+'ail'+'.c'+'om'; return false;">juanm<span style="display: none;">.nosp@m.</span>arco<span style="display: none;">.nosp@m.</span>s26@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<div class="textblock"><p>C routine that generates the data for building the Figure 2(c). </p>
+<p>Figure 2(c) shows reconstruction SNR (R-SNR) obtained for the reconstructed signal using an increasing set of impulsiveness levels, where the R-SNR is just the negative of NMSE in dB. </p><dl class="section author"><dt>Author</dt><dd>Juan Marcos Ramirez Rondon (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nr'+'a@u'+'la'+'.ve'; return false;">juanr<span style="display: none;">.nosp@m.</span>a@ul<span style="display: none;">.nosp@m.</span>a.ve</a>, <a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nm'+'arc'+'os'+'26@'+'gm'+'ail'+'.c'+'om'; return false;">juanm<span style="display: none;">.nosp@m.</span>arco<span style="display: none;">.nosp@m.</span>s26@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June, 2017 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.00 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>Ramirez, J. M., &amp; Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054. Available on: <a href="https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf">https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf</a> </dd>
