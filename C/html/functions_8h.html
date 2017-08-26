@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Compressive Sensing Reconstruction Algorithms Based On The Weighted Median Operator: headers/functions.h File Reference</title>
+<title>Robust Sparse Signal Recovery Based On Weighted Median Operator [Reproducible Research]: headers/functions.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,8 +23,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Compressive Sensing Reconstruction Algorithms Based On The Weighted Median Operator
+   <div id="projectname">Robust Sparse Signal Recovery Based On Weighted Median Operator [Reproducible Research]
    </div>
+   <div id="projectbrief">C-codes for generating the figures of the ICASSP 2014 paper</div>
   </td>
  </tr>
  </tbody>
@@ -60,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -98,14 +99,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Include dependency graph for functions.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="functions_8h__incl.png" border="0" usemap="#headers_2functions_8h" alt=""/></div>
-<map name="headers_2functions_8h" id="headers_2functions_8h">
-</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="functions_8h__dep__incl.png" border="0" usemap="#headers_2functions_8hdep" alt=""/></div>
 <map name="headers_2functions_8hdep" id="headers_2functions_8hdep">
+<area shape="rect" id="node2" href="nmse__vs__snr__econtaminated_8c.html" title="C routine that generates the data for building the Figure 2(b). " alt="" coords="5,80,156,121"/>
+<area shape="rect" id="node3" href="nmse__vs__snr__gaussian_8c.html" title="C routine that generates the data for building the Figure 2(a). " alt="" coords="180,80,325,121"/>
+<area shape="rect" id="node4" href="rsnr__vs__implevel_8c.html" title="C routine that generates the data for building the Figure 2(c). " alt="" coords="349,80,484,121"/>
 </map>
 </div>
 </div>
@@ -125,8 +127,6 @@ Functions</h2></td></tr>
 <tr class="separator:adab72384c2c404202de6706ae2315109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85c7f21078c98feaca9b9d904e5b0dd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#ae85c7f21078c98feaca9b9d904e5b0dd">absolute_value</a> (double x)</td></tr>
 <tr class="separator:ae85c7f21078c98feaca9b9d904e5b0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e84714d9bda277b7b7d49481189107c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a2e84714d9bda277b7b7d49481189107c">cmp</a> (const void *a, const void *b)</td></tr>
-<tr class="separator:a2e84714d9bda277b7b7d49481189107c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57c8a26a80065769de3f66b1f823788b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a57c8a26a80065769de3f66b1f823788b">weighted_median</a> (int M, double samples[], double weights[])</td></tr>
 <tr class="separator:a57c8a26a80065769de3f66b1f823788b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4cf87485f5fb5f6511f691b48101544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#ad4cf87485f5fb5f6511f691b48101544">arwmr</a> (int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol, double epsilon)</td></tr>
@@ -139,9 +139,9 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Juan Marcos Ramirez Rondon (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nr'+'a@u'+'la'+'.ve'; return false;">juanr<span style="display: none;">.nosp@m.</span>a@ul<span style="display: none;">.nosp@m.</span>a.ve</a>, <a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nm'+'arc'+'os'+'26@'+'gm'+'ail'+'.c'+'om'; return false;">juanm<span style="display: none;">.nosp@m.</span>arco<span style="display: none;">.nosp@m.</span>s26@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>June, 2017 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a href="http://ieeexplore.ieee.org/abstract/document/5728937/">http://ieeexplore.ieee.org/abstract/document/5728937/</a> </dd>
+<dl class="section see"><dt>See also</dt><dd>Ramirez, J. M., &amp; Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054. Available on: <a href="https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf">https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf</a> </dd>
 <dd>
-<a href="https://www.researchgate.net/profile/Juan_Ramirez35/publication/265467333_Robust_Sparse_Signal_Recovery_Based_on_Weighted_Median_Operator/links/544088560cf21227a11bafc0.pdf">https://www.researchgate.net/profile/Juan_Ramirez35/publication/265467333_Robust_Sparse_Signal_Recovery_Based_on_Weighted_Median_Operator/links/544088560cf21227a11bafc0.pdf</a> </dd></dl>
+Paredes, J. L., &amp; Arce, G. R. (2011). Compressive sensing signal reconstruction by weighted median regression estimates. IEEE Transactions on Signal Processing, 59(6), 2585-2601. Available on: <a href="https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf">https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ae85c7f21078c98feaca9b9d904e5b0dd"></a>
 <div class="memitem">
@@ -156,7 +156,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the magnitude of the input number. </p><dl class="section return"><dt>Returns</dt><dd>The absolute value of the input number. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The absolute value of the input number. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>Input number. </td></tr>
@@ -249,32 +249,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2e84714d9bda277b7b7d49481189107c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int cmp </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a0c0a81e7797a05c535bad34449d8642c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +261,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a random number obeying to a standard uniform distribution, (0..1]. </p><dl class="section return"><dt>Returns</dt><dd>A random number that follows a uniform statistical model between 0 and 1. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A random number that follows a uniform statistical model between 0 and 1. </dd></dl>
 
 </div>
 </div>
@@ -361,15 +335,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a random number that follows an e-contaminated statistical model. More precisely, an e-contaminated distribution consists in a mixed noise model that merges Gaussian random samples and sparse gross errors. In other words, e-contaminated distribution follows the model given by </p><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2), \]" src="form_13.png"/>
+<p>Returns a random number following a <img class="formulaInl" alt="$\varepsilon$" src="form_4.png"/>-contaminated noise model. More precisely, the <img class="formulaInl" alt="$\varepsilon$" src="form_4.png"/>-contaminated distribution consists in a mixed noise model that merges Gaussian random samples and sparse gross errors. In other words, the <img class="formulaInl" alt="$\varepsilon$" src="form_4.png"/>-contaminated noise model follows the model given by </p><p class="formulaDsp">
+<img class="formulaDsp" alt="\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2), \]" src="form_0.png"/>
 </p>
-<p> where <img class="formulaInl" alt="$ \varepsilon$" src="form_4.png"/> is the impulsiveness level for the mixed noise model; <img class="formulaInl" alt="$ \sigma^2 $" src="form_9.png"/> is the variance of the Gaussian noise; and <img class="formulaInl" alt="$\kappa $" src="form_6.png"/> is the ratio between the variance of the impulsive noise and the variance of the Gaussian noise. </p><dl class="section return"><dt>Returns</dt><dd>A random number following an e-contaminate distribution. </dd></dl>
+<p> where <img class="formulaInl" alt="$ \varepsilon$" src="form_1.png"/> is the impulsiveness level for the mixed noise model; <img class="formulaInl" alt="$ \sigma^2 $" src="form_2.png"/> is the variance of the Gaussian noise; and <img class="formulaInl" alt="$\kappa $" src="form_3.png"/> is the ratio between the variance of the impulsive noise and the variance of the Gaussian noise. </p><dl class="section return"><dt>Returns</dt><dd>A random number following an e-contaminate noise model. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>Impulsiveness level, <img class="formulaInl" alt="$\varepsilon$" src="form_8.png"/>. </td></tr>
-    <tr><td class="paramname">variance</td><td>the variance of the Gaussian distribution, <img class="formulaInl" alt="$\sigma^2$" src="form_10.png"/>. </td></tr>
-    <tr><td class="paramname">variance_ratio</td><td>the ratio between the variance of the impulsive error model and the variance of the Gaussian noise, <img class="formulaInl" alt="$\kappa$" src="form_11.png"/>. </td></tr>
+    <tr><td class="paramname">level</td><td>Impulsiveness level, <img class="formulaInl" alt="$\varepsilon$" src="form_4.png"/>. </td></tr>
+    <tr><td class="paramname">variance</td><td>the variance of the Gaussian distribution, <img class="formulaInl" alt="$\sigma^2$" src="form_5.png"/>. </td></tr>
+    <tr><td class="paramname">variance_ratio</td><td>the ratio between the variance of the impulsive error model and the variance of the Gaussian noise, <img class="formulaInl" alt="$\kappa$" src="form_6.png"/>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -388,7 +362,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a random number obeying to a zero mean Gaussian distribution with unit variance. </p><dl class="section return"><dt>Returns</dt><dd>A random number normally distributed with zero mean and unit variance. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A random number obeying to a Gaussian distribution with zero mean and unit variance. </dd></dl>
 
 </div>
 </div>
@@ -405,7 +379,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns an array containing a random permutation of integer numbers from 1 to n. </p><dl class="section return"><dt>Returns</dt><dd>An array containing a random permutation of integers. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An array containing a random permutation of integer numbers from 1 to n. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>Number of elements of the output array. </td></tr>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Compressive Sensing Reconstruction Algorithms Based On The Weighted Median Operator: simulations/nmse_vs_snr_econtaminated.c File Reference</title>
+<title>Robust Sparse Signal Recovery Based On Weighted Median Operator [Reproducible Research]: simulations/nmse_vs_snr_econtaminated.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,8 +23,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Compressive Sensing Reconstruction Algorithms Based On The Weighted Median Operator
+   <div id="projectname">Robust Sparse Signal Recovery Based On Weighted Median Operator [Reproducible Research]
    </div>
+   <div id="projectbrief">C-codes for generating the figures of the ICASSP 2014 paper</div>
   </td>
  </tr>
  </tbody>
@@ -60,7 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -92,16 +93,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>C routine that generates the data for building the Figure 2(b).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;time.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;time.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="functions_8h_source.html">../headers/functions.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for nmse_vs_snr_econtaminated.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="nmse__vs__snr__econtaminated_8c__incl.png" border="0" usemap="#simulations_2nmse__vs__snr__econtaminated_8c" alt=""/></div>
-<!-- MAP 0 -->
+<map name="simulations_2nmse__vs__snr__econtaminated_8c" id="simulations_2nmse__vs__snr__econtaminated_8c">
+<area shape="rect" id="node4" href="functions_8h.html" title="Function prototypes for implementing robust sparse signal recovery algorithms based on the weighted m..." alt="" coords="175,95,323,121"/>
+</map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -111,13 +112,17 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>C routine that generates the data for building the Figure 2(b). </p>
-<p>Figure 2(b) depicts the curves of NMSE in dB of the recovered coefficient vector versus SNR in dB of the random projections when the additive noise follows an e-contaminated noise model with impulsiveness level of <img class="formulaInl" alt="$ \varepsilon = 3\% $" src="form_14.png"/>. This curves are obtained by applying the proposed reconstruction algorithm and the weighted median hard-thresholding algorithm. Each point in the curves are obtained by averaging a user defined number of trials of the respective experiment. </p><dl class="section author"><dt>Author</dt><dd>Juan Marcos Ramirez Rondon (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nr'+'a@u'+'la'+'.ve'; return false;">juanr<span style="display: none;">.nosp@m.</span>a@ul<span style="display: none;">.nosp@m.</span>a.ve</a>, <a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nm'+'arc'+'os'+'26@'+'gm'+'ail'+'.c'+'om'; return false;">juanm<span style="display: none;">.nosp@m.</span>arco<span style="display: none;">.nosp@m.</span>s26@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>June, 2017 </dd></dl>
+<p>Figure 2(b) shows the curves of the normalized mean square error (NMSE) in dB of the recovered coefficient vector versus the signal-to-noise ratio (SNR) in dB of the random projections. For this experiment, the additive perturbations are characterized using an <img class="formulaInl" alt="$ \varepsilon $" src="form_8.png"/>-contaminated noise model (also known as p-Gaussian noise) with impulsiveness level of <img class="formulaInl" alt="$ \varepsilon = 3\% $" src="form_7.png"/> and <img class="formulaInl" alt="$ \sigma_2^2 = 100 \sigma_1^2 $" src="form_9.png"/>. More precisely, the variance of the Gaussian noise <img class="formulaInl" alt="$\sigma_1^2$" src="form_10.png"/> is computed from the SNR values under evaluation. Furthermore, this experiment obtains the error data generated by both the proposed sparse signal recovery algorithm (WMR-AR, weighted median regressions with adaptive regularizer) and the method based on weighted median regressions with hard thresholding (WMR-HT). Each point in the curves are obtained by averaging a user-defined number of trials, which is introduced in running time. The results of the simulation are saved in the results directory and the curves can be visualized by running the <code>Figure2b.m</code> routine. This plotting routine can be executed under either Octave or Matlab.</p>
+<dl class="section author"><dt>Author</dt><dd>Juan Marcos Ramirez Rondon (<a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nr'+'a@u'+'la'+'.ve'; return false;">juanr<span style="display: none;">.nosp@m.</span>a@ul<span style="display: none;">.nosp@m.</span>a.ve</a>, <a href="#" onclick="location.href='mai'+'lto:'+'jua'+'nm'+'arc'+'os'+'26@'+'gm'+'ail'+'.c'+'om'; return false;">juanm<span style="display: none;">.nosp@m.</span>arco<span style="display: none;">.nosp@m.</span>s26@g<span style="display: none;">.nosp@m.</span>mail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>August, 2017 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.00 </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>Ramirez, J. M., &amp; Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. IEEE International Conference on Acoustic, Speech, and Signal Processing (ICASSP 2014). pp 1050-1054. Available on: <a href="https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf">https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf</a> </dd>
 <dd>
-Paredes, J. L., &amp; Arce, G. R. (2011). Compressive sensing signal reconstruction by weighted median regression estimates. IEEE Transactions on Signal Processing, 59(6), 2585-2601. Available on: <a href="https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf">https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf</a> </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+Paredes, J. L., &amp; Arce, G. R. (2011). Compressive sensing signal reconstruction by weighted median regression estimates. IEEE Transactions on Signal Processing, 59(6), 2585-2601. Available on: <a href="https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf">https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf</a></dd></dl>
+<div class="image">
+<img src="Figure2b.jpg" alt="Figure2b.jpg"/>
+</div>
+ </div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <div class="memitem">
 <div class="memproto">

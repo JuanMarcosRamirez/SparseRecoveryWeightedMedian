@@ -1,15 +1,12 @@
-\form#0:$ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) $
-\form#1:$ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2) $
-\form#2:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2) \]
-\form#3:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,(\kappa \sigma)^2), \]
-\form#4:$ \varepsilon$
-\form#5:$ \sigma $
-\form#6:$\kappa $
-\form#7:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma) + (1-\varepsilon)\mathcal{N}(0,(\kappa \sigma)), \]
-\form#8:$\varepsilon$
-\form#9:$ \sigma^2 $
-\form#10:$\sigma^2$
-\form#11:$\kappa$
-\form#12:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,(\kappa \sigma^2)), \]
-\form#13:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2), \]
-\form#14:$ \varepsilon = 3\% $
+\form#0:\[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2), \]
+\form#1:$ \varepsilon$
+\form#2:$ \sigma^2 $
+\form#3:$\kappa $
+\form#4:$\varepsilon$
+\form#5:$\sigma^2$
+\form#6:$\kappa$
+\form#7:$ \varepsilon = 3\% $
+\form#8:$ \varepsilon $
+\form#9:$ \sigma_2^2 = 100 \sigma_1^2 $
+\form#10:$\sigma_1^2$
+\form#11:$ SNR = 12 dB $

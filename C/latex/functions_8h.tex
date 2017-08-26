@@ -7,4 +7,248 @@ Function prototypes for implementing robust sparse signal recovery algorithms ba
 
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
-Include dependency graph for functions.\+h\+:
+Include dependency graph for functions.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{functions_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{functions_8h_a0c0a81e7797a05c535bad34449d8642c}{drand} ()
+\item 
+double \hyperlink{functions_8h_a3a13ef53219d77d0d734f51fa44bde27}{random\+\_\+normal} ()
+\item 
+double \hyperlink{functions_8h_afc6399a349010f037d590c6ea37d230b}{random\+\_\+econtaminated} (double level, double variance, double variance\+\_\+ratio)
+\item 
+int $\ast$ \hyperlink{functions_8h_a9af456774f7b744234d4b039e0fcb85e}{random\+\_\+permutation} (int n)
+\item 
+double \hyperlink{functions_8h_adab72384c2c404202de6706ae2315109}{qselect} (double $\ast$v, int len, int k)
+\item 
+double \hyperlink{functions_8h_ae85c7f21078c98feaca9b9d904e5b0dd}{absolute\+\_\+value} (double x)
+\item 
+double \hyperlink{functions_8h_a57c8a26a80065769de3f66b1f823788b}{weighted\+\_\+median} (int M, double samples\mbox{[}$\,$\mbox{]}, double weights\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{functions_8h_ad4cf87485f5fb5f6511f691b48101544}{arwmr} (int N, int M, double x\mbox{[}$\,$\mbox{]}, double y\mbox{[}$\,$\mbox{]}, double A\mbox{[}$\,$\mbox{]}\mbox{[}M\mbox{]}, int itmax, double beta, double tol, double epsilon)
+\item 
+void \hyperlink{functions_8h_a7763860277b7bcd945b02628fe8e5189}{wmr} (int N, int M, double x\mbox{[}$\,$\mbox{]}, double y\mbox{[}$\,$\mbox{]}, double A\mbox{[}$\,$\mbox{]}\mbox{[}M\mbox{]}, int itmax, double beta, double tol)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Function prototypes for implementing robust sparse signal recovery algorithms based on the weighted median operator. 
+
+\begin{DoxyAuthor}{Author}
+Juan Marcos Ramirez Rondon (\href{mailto:juanra@ula.ve}{\tt juanra@ula.\+ve}, \href{mailto:juanmarcos26@gmail.com}{\tt juanmarcos26@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June, 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{See also}
+Ramirez, J. M., \& Paredes, J. L. (2014). Robust Sparse Signal Recovery Based on Weighted Median Operator. I\+E\+EE International Conference on Acoustic, Speech, and Signal Processing (I\+C\+A\+S\+SP 2014). pp 1050-\/1054. Available on\+: \href{https://github.com/JuanMarcosRamirez/SparseRecoveryWeightedMedian/blob/master/p1050-ramirez.pdf}{\tt https\+://github.\+com/\+Juan\+Marcos\+Ramirez/\+Sparse\+Recovery\+Weighted\+Median/blob/master/p1050-\/ramirez.\+pdf} 
+
+Paredes, J. L., \& Arce, G. R. (2011). Compressive sensing signal reconstruction by weighted median regression estimates. I\+E\+EE Transactions on Signal Processing, 59(6), 2585-\/2601. Available on\+: \href{https://www.eecis.udel.edu/~arce/Group/Entries/2012/7/2_Compressive_Spectral_Imaging_files/CompSignReconst.pdf}{\tt https\+://www.\+eecis.\+udel.\+edu/$\sim$arce/\+Group/\+Entries/2012/7/2\+\_\+\+Compressive\+\_\+\+Spectral\+\_\+\+Imaging\+\_\+files/\+Comp\+Sign\+Reconst.\+pdf} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\index{functions.\+h@{functions.\+h}!absolute\+\_\+value@{absolute\+\_\+value}}
+\index{absolute\+\_\+value@{absolute\+\_\+value}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{absolute\+\_\+value(double x)}{absolute_value(double x)}}]{\setlength{\rightskip}{0pt plus 5cm}double absolute\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_ae85c7f21078c98feaca9b9d904e5b0dd}{}\label{functions_8h_ae85c7f21078c98feaca9b9d904e5b0dd}
+\begin{DoxyReturn}{Returns}
+The absolute value of the input number. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input number. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+h@{functions.\+h}!arwmr@{arwmr}}
+\index{arwmr@{arwmr}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol, double epsilon)}{arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol, double epsilon)}}]{\setlength{\rightskip}{0pt plus 5cm}void arwmr (
+\begin{DoxyParamCaption}
+\item[{int}]{N, }
+\item[{int}]{M, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{y\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}, }
+\item[{int}]{itmax, }
+\item[{double}]{beta, }
+\item[{double}]{tol, }
+\item[{double}]{epsilon}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_ad4cf87485f5fb5f6511f691b48101544}{}\label{functions_8h_ad4cf87485f5fb5f6511f691b48101544}
+Returns the sparse coefficient vector given by the adaptive regularizer weighted median regression (arwmr) algorithm. \begin{DoxyReturn}{Returns}
+The recovered sparse coefficient vector. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Coefficient vector length. \\
+\hline
+{\em M} & Projection vector length. \\
+\hline
+{\em x\mbox{[}$\,$\mbox{]}} & output coefficient vector. \\
+\hline
+{\em y\mbox{[}$\,$\mbox{]}} & Projection vector. \\
+\hline
+{\em A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}} & Dicctionary. \\
+\hline
+{\em itmax} & Maximum number of iterations. \\
+\hline
+{\em beta} & Continuation parameter. \\
+\hline
+{\em tol} & Tolerance \\
+\hline
+{\em epsilon} & epsilon. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+h@{functions.\+h}!drand@{drand}}
+\index{drand@{drand}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{drand()}{drand()}}]{\setlength{\rightskip}{0pt plus 5cm}double drand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_a0c0a81e7797a05c535bad34449d8642c}{}\label{functions_8h_a0c0a81e7797a05c535bad34449d8642c}
+\begin{DoxyReturn}{Returns}
+A random number that follows a uniform statistical model between 0 and 1. 
+\end{DoxyReturn}
+\index{functions.\+h@{functions.\+h}!qselect@{qselect}}
+\index{qselect@{qselect}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{qselect(double $\ast$v, int len, int k)}{qselect(double *v, int len, int k)}}]{\setlength{\rightskip}{0pt plus 5cm}double qselect (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{v, }
+\item[{int}]{len, }
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_adab72384c2c404202de6706ae2315109}{}\label{functions_8h_adab72384c2c404202de6706ae2315109}
+Returns the k-\/order statistic of an array using the quickselect algorithm, where the zero-\/order statistic is the smallest element of the array and the (N-\/1)-\/order statistic is the largest element of the array. \begin{DoxyReturn}{Returns}
+The k-\/order statistic of the input array 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Input array. \\
+\hline
+{\em len} & Length of the input array. \\
+\hline
+{\em k} & the required k-\/order statistic in the range \mbox{[}0,len-\/1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+h@{functions.\+h}!random\+\_\+econtaminated@{random\+\_\+econtaminated}}
+\index{random\+\_\+econtaminated@{random\+\_\+econtaminated}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{random\+\_\+econtaminated(double level, double variance, double variance\+\_\+ratio)}{random_econtaminated(double level, double variance, double variance_ratio)}}]{\setlength{\rightskip}{0pt plus 5cm}double random\+\_\+econtaminated (
+\begin{DoxyParamCaption}
+\item[{double}]{level, }
+\item[{double}]{variance, }
+\item[{double}]{variance\+\_\+ratio}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_afc6399a349010f037d590c6ea37d230b}{}\label{functions_8h_afc6399a349010f037d590c6ea37d230b}
+Returns a random number following a $\varepsilon$-\/contaminated noise model. More precisely, the $\varepsilon$-\/contaminated distribution consists in a mixed noise model that merges Gaussian random samples and sparse gross errors. In other words, the $\varepsilon$-\/contaminated noise model follows the model given by \[ f_{\eta}(\eta) = \varepsilon \mathcal{N}(0,\sigma^2) + (1-\varepsilon)\mathcal{N}(0,\kappa \sigma^2), \] where $ \varepsilon$ is the impulsiveness level for the mixed noise model; $ \sigma^2 $ is the variance of the Gaussian noise; and $\kappa $ is the ratio between the variance of the impulsive noise and the variance of the Gaussian noise. \begin{DoxyReturn}{Returns}
+A random number following an e-\/contaminate noise model. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Impulsiveness level, $\varepsilon$. \\
+\hline
+{\em variance} & the variance of the Gaussian distribution, $\sigma^2$. \\
+\hline
+{\em variance\+\_\+ratio} & the ratio between the variance of the impulsive error model and the variance of the Gaussian noise, $\kappa$. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+h@{functions.\+h}!random\+\_\+normal@{random\+\_\+normal}}
+\index{random\+\_\+normal@{random\+\_\+normal}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{random\+\_\+normal()}{random_normal()}}]{\setlength{\rightskip}{0pt plus 5cm}double random\+\_\+normal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_a3a13ef53219d77d0d734f51fa44bde27}{}\label{functions_8h_a3a13ef53219d77d0d734f51fa44bde27}
+\begin{DoxyReturn}{Returns}
+A random number obeying to a Gaussian distribution with zero mean and unit variance. 
+\end{DoxyReturn}
+\index{functions.\+h@{functions.\+h}!random\+\_\+permutation@{random\+\_\+permutation}}
+\index{random\+\_\+permutation@{random\+\_\+permutation}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{random\+\_\+permutation(int n)}{random_permutation(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ random\+\_\+permutation (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_a9af456774f7b744234d4b039e0fcb85e}{}\label{functions_8h_a9af456774f7b744234d4b039e0fcb85e}
+\begin{DoxyReturn}{Returns}
+An array containing a random permutation of integer numbers from 1 to n. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of elements of the output array. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+h@{functions.\+h}!weighted\+\_\+median@{weighted\+\_\+median}}
+\index{weighted\+\_\+median@{weighted\+\_\+median}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{weighted\+\_\+median(int M, double samples[], double weights[])}{weighted_median(int M, double samples[], double weights[])}}]{\setlength{\rightskip}{0pt plus 5cm}double weighted\+\_\+median (
+\begin{DoxyParamCaption}
+\item[{int}]{M, }
+\item[{double}]{samples\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{weights\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_a57c8a26a80065769de3f66b1f823788b}{}\label{functions_8h_a57c8a26a80065769de3f66b1f823788b}
+Returns the weighted median of a vector of samples that is weighted by a vector of weights. \begin{DoxyReturn}{Returns}
+The weighted median output. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em M} & Length of the vector of samples (as well as the length of the vector of weights). \\
+\hline
+{\em samples} & Vector of samples. \\
+\hline
+{\em weights} & Vector of weights. \\
+\hline
+\end{DoxyParams}
+\index{functions.\+h@{functions.\+h}!wmr@{wmr}}
+\index{wmr@{wmr}!functions.\+h@{functions.\+h}}
+\subsubsection[{\texorpdfstring{wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol)}{wmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol)}}]{\setlength{\rightskip}{0pt plus 5cm}void wmr (
+\begin{DoxyParamCaption}
+\item[{int}]{N, }
+\item[{int}]{M, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{y\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}, }
+\item[{int}]{itmax, }
+\item[{double}]{beta, }
+\item[{double}]{tol}
+\end{DoxyParamCaption}
+)}\hypertarget{functions_8h_a7763860277b7bcd945b02628fe8e5189}{}\label{functions_8h_a7763860277b7bcd945b02628fe8e5189}
+Returns the sparse coefficient vector given by the weighted median regression (wmr) algorithm. \begin{DoxyReturn}{Returns}
+The recovered sparse coefficient vector. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em N} & Coefficient vector length. \\
+\hline
+{\em M} & Projection vector length. \\
+\hline
+{\em x\mbox{[}$\,$\mbox{]}} & output coefficient vector. \\
+\hline
+{\em y\mbox{[}$\,$\mbox{]}} & Projection vector. \\
+\hline
+{\em A\mbox{[}$\,$\mbox{]}\mbox{[}\+M\mbox{]}} & Dicctionary. \\
+\hline
+{\em itmax} & Maximum number of iterations. \\
+\hline
+{\em beta} & Continuation parameter. \\
+\hline
+{\em tol} & Tolerance \\
+\hline
+\end{DoxyParams}

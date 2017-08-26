@@ -78,8 +78,9 @@ double absolute_value(double x)
 		return x;
 }
 
+
 double *array;
-int cmp(const void *a, const void *b){
+static int cmp(const void *a, const void *b){
     int ia = *(int *)a;
     int ib = *(int *)b;
     return array[ia] < array[ib] ? -1 : array[ia] > array[ib];
@@ -115,6 +116,7 @@ double weighted_median(int M, double samples[], double weights[])
 
 	return output;
 }
+
 
 
 void arwmr(int N, int M, double x[], double y[], double A[][M], int itmax, double beta, double tol, double epsilon)

@@ -1,8 +1,0 @@
-digraph "simulations" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  dir_83271c016684bff04ce022d17a2ba8ac [shape=box, label="simulations", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_83271c016684bff04ce022d17a2ba8ac.html"];
-  dir_7f57b1e41c5acd0e859ae5f3a2b075a9 [shape=box label="headers" URL="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html"];
-  dir_83271c016684bff04ce022d17a2ba8ac->dir_7f57b1e41c5acd0e859ae5f3a2b075a9 [headlabel="3", labeldistance=1.5 headhref="dir_000001_000000.html"];
-}

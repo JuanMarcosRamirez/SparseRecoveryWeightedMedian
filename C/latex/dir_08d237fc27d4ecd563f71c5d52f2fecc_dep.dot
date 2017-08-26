@@ -1,8 +1,0 @@
-digraph "sources" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  dir_08d237fc27d4ecd563f71c5d52f2fecc [shape=box, label="sources", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_08d237fc27d4ecd563f71c5d52f2fecc.html"];
-  dir_7f57b1e41c5acd0e859ae5f3a2b075a9 [shape=box label="headers" URL="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html"];
-  dir_08d237fc27d4ecd563f71c5d52f2fecc->dir_7f57b1e41c5acd0e859ae5f3a2b075a9 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000000.html"];
-}
